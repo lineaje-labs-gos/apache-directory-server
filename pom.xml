@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements.  See the NOTICE file
@@ -18,32 +16,26 @@
   specific language governing permissions and limitations
   under the License.
 -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.apache.directory.project</groupId>
     <artifactId>project</artifactId>
     <version>33</version>
-    <relativePath />
+    <relativePath/>
   </parent>
-
   <groupId>org.apache.directory.server</groupId>
   <artifactId>apacheds-parent</artifactId>
-  <version>2.0.0-M18</version>
+  <version>2.0.0-M18-lineaje-01</version>
   <packaging>pom</packaging>
-
   <name>ApacheDS</name>
-
   <description>ApacheDS is an embbedable directory server entirely written in Java, which has been certified LDAPv3 compatible
     by the Open Group. Besides LDAP it supports Kerberos 5 and the Change Password Protocol. It has been designed to introduce
     triggers, stored procedures, queues and views to the world of LDAP which has lacked these rich constructs.
   </description>
-
   <properties>
     <projectName>Apache Directory Server</projectName>
     <distMgmtSiteUrl>scpexe://people.apache.org/www/directory.apache.org/apacheds/gen-docs/${project.version}/</distMgmtSiteUrl>
-
     <!-- Set versions for depending projects -->
     <org.apache.directory.api.version>1.0.0-M25</org.apache.directory.api.version>
     <org.apache.directory.mavibot.version>1.0.0-M6</org.apache.directory.mavibot.version>
@@ -51,7 +43,6 @@
     <org.apache.directory.junit.junit-addons.version>0.1</org.apache.directory.junit.junit-addons.version>
     <org.apache.directory.jdbm.version>2.0.0-M3</org.apache.directory.jdbm.version>
     <skin.version>1.0.2</skin.version>
-    
     <!-- Set versions for depending jars -->
     <ant.version>1.9.4</ant.version>
     <bcprov.version>140</bcprov.version>
@@ -79,21 +70,17 @@
     <slf4j.log4j12.version>1.7.7</slf4j.log4j12.version>
     <wrapper.version>3.2.3</wrapper.version>
   </properties>
-
   <url>http://directory.apache.org/apacheds/1.5</url>
-
   <distributionManagement>
     <site>
       <id>apache.directory.apacheds</id>
       <url>${distMgmtSiteUrl}</url>
     </site>
   </distributionManagement>
-
   <issueManagement>
     <system>JIRA</system>
     <url>http://issues.apache.org/jira/browse/DIRSERVER</url>
   </issueManagement>
-  
   <modules>
     <module>i18n</module>
     <module>all</module>
@@ -147,7 +134,6 @@
     <!--<module>service-osgi</module>-->
     <!--<module>component-hub</module>-->
   </modules>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -237,7 +223,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -246,7 +232,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    
     <plugins>
       <!-- plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -295,7 +280,6 @@
                 <forkedProcessTimeoutInSeconds>3600</forkedProcessTimeoutInSeconds>
               </configuration>
             </plugin>
-      
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-jxr-plugin</artifactId>
@@ -303,7 +287,6 @@
                 <aggregate>true</aggregate>
               </configuration>
             </plugin>
-       
             <!-- plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-pmd-plugin</artifactId>
@@ -320,7 +303,7 @@
               <artifactId>maven-project-info-reports-plugin</artifactId>
               <reportSets>
                 <reportSet>
-                    <reports>
+                  <reports>
                     <report>project-team</report>
                     <report>mailing-list</report>
                     <report>license</report>
@@ -361,7 +344,6 @@
                 </tags>
               </configuration>
             </plugin>
-      
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-javadoc-plugin</artifactId>
@@ -412,7 +394,6 @@
                 </reportSet>
               </reportSets>
             </plugin>
-      
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
@@ -426,7 +407,6 @@
                 <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
               </configuration>
             </plugin>
-      
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>cobertura-maven-plugin</artifactId>
@@ -438,7 +418,6 @@
                 </instrumentation>
               </configuration>
             </plugin>
-      
             <!-- plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-checkstyle-plugin</artifactId>
@@ -447,7 +426,6 @@
                 <xrefLocation>${project.reporting.outputDirectory}/../xref</xrefLocation>
               </configuration>
             </plugin -->
-      
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>versions-maven-plugin</artifactId>
@@ -461,17 +439,14 @@
                 </reportSet>
               </reportSets>
             </plugin>
-      
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>javancss-maven-plugin</artifactId>
             </plugin>
-      
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>jdepend-maven-plugin</artifactId>
             </plugin>
-      
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-changes-plugin</artifactId>
@@ -489,17 +464,35 @@
                 </reportSet>
               </reportSets>
             </plugin>
-      
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>dashboard-maven-plugin</artifactId>
             </plugin>
-          </reportPlugins>       
+          </reportPlugins>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <gpgArguments>
+            <arg>--pinentry-mode</arg>
+            <arg>loopback</arg>
+          </gpgArguments>
         </configuration>
       </plugin>
     </plugins>
   </build>
-  
   <dependencyManagement>
     <dependencies>
       <!-- Project sub-modules dependencies -->
@@ -508,675 +501,559 @@
         <artifactId>apacheds-all</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-benchmarks</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-annotations</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-api</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-api</artifactId>
         <version>${project.version}</version>
         <type>test-jar</type>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-avl</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-constants</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-integ</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-jndi</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-core-shared</artifactId>
         <version>${project.version}</version>
       </dependency>
-     
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-default-config</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-http-integration</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-i18n</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.jdbm</groupId>
         <artifactId>apacheds-jdbm1</artifactId>
         <!--type>bundle</type-->
         <version>${org.apache.directory.jdbm.version}</version>
       </dependency>
-     
-      <!-- Interceptors --> 
+      <!-- Interceptors -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-admin</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-number</artifactId>
         <version>${project.version}</version>
       </dependency>
-
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-authn</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-authz</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-changelog</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-collective</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-event</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-exception</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-hash</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-journal</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptor-kerberos</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-logger</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-normalization</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-operational</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-referral</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-schema</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-subtree</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-interceptors-trigger</artifactId>
         <version>${project.version}</version>
       </dependency>
-
-      <!-- Interceptors --> 
+      <!-- Interceptors -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-jdbm-partition</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-kerberos-shared</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-kerberos-codec</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-kerberos-test</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-kerberos-test</artifactId>
         <version>${project.version}</version>
         <type>test-jar</type>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-ldap-client-test</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-ldif-partition</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
-     <!-- <dependency>
+      <!-- <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-changepw</artifactId>
         <version>${project.version}</version>
       </dependency> -->
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-dhcp</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-dns</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-kerberos</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-ldap</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-ntp</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-protocol-shared</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-server-annotations</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-server-integ</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-server-jndi</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-server-sar</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-syncrepl</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-test-framework</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-xdbm-partition</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-xdbm-partition</artifactId>
         <version>${project.version}</version>
         <type>test-jar</type>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-service</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-service-builder</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-wrapper</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-installers</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-installers-maven-plugin</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-server-config</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-server-config-builder</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>apacheds-mavibot-partition</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
       <!-- Shared dependencies -->
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-client-api</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-asn1-api</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-asn1-ber</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-all</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-dsml-parser</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-dsml-engine</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-i18n</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-codec-core</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-codec-standalone</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-extras-aci</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-extras-codec</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-extras-codec-api</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-extras-sp</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-extras-trigger</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-extras-util</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-model</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-ldap-schema-data</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>org.apache.directory.api</groupId>
         <artifactId>api-util</artifactId>
         <version>${org.apache.directory.api.version}</version>
       </dependency>
-      
       <!-- Mavibot dependencies -->
-      
       <dependency>
         <groupId>org.apache.directory.mavibot</groupId>
         <artifactId>mavibot</artifactId>
         <version>${org.apache.directory.mavibot.version}</version>
       </dependency>
-      
       <!-- Mina dependencies -->
-      
       <dependency>
         <groupId>org.apache.mina</groupId>
         <artifactId>mina-core</artifactId>
         <version>${mina.core.version}</version>
       </dependency>
-
       <!-- Commons dependencies -->
-      
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>${commons.io.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-collections</groupId>
         <artifactId>commons-collections</artifactId>
         <version>${commons.collections.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-daemon</groupId>
         <artifactId>commons-daemon</artifactId>
         <version>${commons.daemon.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
         <version>${commons.lang.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-cli</groupId>
         <artifactId>commons-cli</artifactId>
         <version>${commons.cli.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-net</groupId>
         <artifactId>commons-net</artifactId>
         <version>${commons.net.version}</version>
       </dependency>
-
       <dependency>
         <groupId>commons-pool</groupId>
         <artifactId>commons-pool</artifactId>
         <version>${commons.pool.version}</version>
       </dependency>
-
       <!-- Test dependencies -->
-
       <dependency>
         <groupId>org.apache.directory.junit</groupId>
         <artifactId>junit-addons</artifactId>
         <version>${org.apache.directory.junit.junit-addons.version}</version>
       </dependency>
-
       <!-- Logging dependencies -->
-
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>${slf4j.api.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-log4j12</artifactId>
         <version>${slf4j.log4j12.version}</version>
       </dependency>
-
       <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>${log4j.version}</version>
       </dependency>
-      
       <!-- Other dependencies -->
-
       <dependency>
         <groupId>org.apache.ant</groupId>
         <artifactId>ant</artifactId>
         <version>${ant.version}</version>
       </dependency>
-
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-plugin-api</artifactId>
         <version>${maven.plugin.api.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-project</artifactId>
         <version>${maven.project.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-archiver</artifactId>
         <version>${maven.archiver.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-utils</artifactId>
         <version>${plexus.utils.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-artifact</artifactId>
         <version>${maven.artifact.version}</version>
       </dependency>
-
       <dependency>
         <groupId>ldapsdk</groupId>
         <artifactId>ldapsdk</artifactId>
         <version>${ldapsdk.version}</version>
       </dependency>
-
       <dependency>
         <groupId>dnsjava</groupId>
         <artifactId>dnsjava</artifactId>
         <version>${dnsjava.version}</version>
       </dependency>
-
       <dependency>
         <groupId>tanukisoft</groupId>
         <artifactId>wrapper</artifactId>
         <version>${wrapper.version}</version>
       </dependency>
-
       <dependency>
         <groupId>bouncycastle</groupId>
         <artifactId>bcprov-jdk15</artifactId>
         <version>${bcprov.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty</artifactId>
         <version>${jetty.version}</version>
       </dependency>
-    
       <dependency>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>servlet-api-2.5</artifactId>
         <version>${jetty.version}</version>
       </dependency>
-    
       <dependency>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty-util</artifactId>
         <version>${jetty.version}</version>
       </dependency>
-
       <dependency>
         <groupId>findbugs</groupId>
         <artifactId>annotations</artifactId>
         <version>${findbugs.annotations.version}</version>
       </dependency>
-      
       <dependency>
         <groupId>net.sf.ehcache</groupId>
         <artifactId>ehcache-core</artifactId>
@@ -1184,7 +1061,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <!-- for Java5 findbugs annotations are required in each module at compile time -->
     <dependency>
@@ -1192,33 +1068,29 @@
       <artifactId>annotations</artifactId>
       <scope>provided</scope>
     </dependency>
-
     <!-- common logging interface -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
-
     <!-- logging implementation used for unit tests -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/directory/apacheds/tags/2.0.0-M18</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/directory/apacheds/tags/2.0.0-M18</developerConnection>
-    <url>http://svn.apache.org/viewvc/directory/apacheds/tags/2.0.0-M18</url>
+    <connection>scm:git:apache-directory-server</connection>
+    <developerConnection>scm:git:apache-directory-server</developerConnection>
+    <url>apache-directory-server</url>
+    <tag>2.0.0-M18-lineaje-01</tag>
   </scm>
-
   <repositories>
     <repository>
       <id>apache.snapshots</id>
@@ -1232,4 +1104,10 @@
       </snapshots>
     </repository>
   </repositories>
+  <contributors>
+    <contributor>
+      <name>Lineaje DepFixer</name>
+      <email>221268890+Lineaje-DepFixer@users.noreply.github.com</email>
+    </contributor>
+  </contributors>
 </project>
